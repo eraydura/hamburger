@@ -3,6 +3,7 @@ body {
   font-family: "Sofia", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
 }
 
 
@@ -197,12 +198,11 @@ code {
     position: absolute;
     right: 0;
     z-index: 100000;
-    top: 60px;
+    top: 80px;
     background-color: #ffffff;
     width: 0px;
-    height: calc(98.5vh - 60px);
+    height: calc(98.5vh - 80px);
     transition: all 0.3s ease-in;
-    overflow: hidden;
   }
 
   .nav-elements.active {
