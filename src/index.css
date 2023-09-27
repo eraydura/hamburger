@@ -134,9 +134,9 @@ code {
 .arrowdiv{
   border-top-width: 0px;
   color: #ffffff;
-  font-size: 150px;
+  font-size: 250px;
   position: relative;
-  margin-top: 18%;
+  margin-top: 12%;
   left: 75%;
 }
 
@@ -156,9 +156,22 @@ code {
   font-size: 150px;
   font-weight: 900;
 }
+.image2{
+  display: none;
+}
 @media (max-width: 800px) {
   .image{
     display: none;
+  }
+  .column{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .image2{
+    margin-left: 25%;
+    margin-top: 5%;
+    width: 55%;
+    display: block;
   }
   .menu-icon {
     left: 100%;
@@ -172,18 +185,18 @@ code {
 
   .our{
     text-align: center;
+    font-size: 30px;
   }
   .burger{
-    text-align: center;
+    font-size: 100px;
   }
   .information{
-     display: none;
+    left: 20%;
   }
-  
   .information2{
-    display: none;
+    left: 15%;
+    top: 480px;
   }
-
 
   .nav-elements {
     position: absolute;
@@ -220,6 +233,19 @@ code {
 
   .nav-elements ul li a:hover{
     color: #550100;
+  }
+  .arrowdiv2{
+    border-top-width: 0px;
+    color: #ffffff;
+    font-size: 80px;
+    position: relative;
+  }
+
+  .arrowdiv3{
+    border-top-width: 0px;
+    color: #ffffff;
+    font-size: 80px;
+    position: relative;
   }
   
 }
