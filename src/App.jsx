@@ -8,19 +8,20 @@ import pizza from '../assets/pizza/pizza.glb';
 import logo from "./icons/hamburgermenu.png";
 import logomain from "../src/icons/logo.png";
 import hamburgers from "../src/icons/hamburger.png";
-import menu from "../src/icons/realmenu.png";
 import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
+import Modal from '@mui/joy/Modal';
+import ModalClose from '@mui/joy/ModalClose';
 import SignInSide from './Contact';
 import About from './About';
+import menu from "../src/icons/realmenu.png";
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '80%',
-  height: '80%',
+  width: '100%',
+  height: '100%',
   boxShadow: 100,
 };
 
@@ -190,6 +191,7 @@ function App() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+        <ModalClose  />
                 {(() => {
                 if (modals=="About") {
                   return (
