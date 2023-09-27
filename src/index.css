@@ -17,6 +17,11 @@ body {
   background-size: cover;
 }
 
+.menu{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
 .myDiv { 
   text-align: center;
   position: absolute;
@@ -157,6 +162,12 @@ code {
   font-size: 150px;
   font-weight: 900;
 }
+.pizza{
+
+  color: white;
+  font-size: 150px;
+  font-weight: 900;
+}
 .image2{
   display: none;
 }
@@ -186,6 +197,9 @@ code {
   }
   .burger{
     font-size: 85px;
+  }
+  .pizza{
+    font-size: 100px;
   }
   .information{
     left: 15%;
