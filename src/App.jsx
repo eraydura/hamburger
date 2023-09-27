@@ -1,4 +1,4 @@
-import { useEffect,useState } from 'react';
+import React,{ useEffect,useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import SceneInit from './lib/SceneInit';
@@ -8,11 +8,32 @@ import pizza from '../assets/pizza/pizza.glb';
 import logo from "./icons/hamburgermenu.png";
 import logomain from "../src/icons/logo.png";
 import hamburgers from "../src/icons/hamburger.png";
-import menu from "../src/icons/menu.png";
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import SignInSide from './Contact';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '80%',
+  height: '80%',
+  boxShadow: 100,
+};
 
 function App() {
-  const [showNavbar, setShowNavbar] = useState(false)
-  const [hamburger, setHamburger] = useState(0)
+  const [showNavbar, setShowNavbar] = useState(false);
+  const [hamburger, setHamburger] = useState(0);
+  const [modals, setModal] = useState("About");
+  const [open, setOpen] = React.useState(false);
+  function handleOpen(which) {
+    setOpen(true);
+    setModal(which);
+    setShowNavbar(false);
+  } 
+  const handleClose = () => setOpen(false);
+
   var number=hamburger;
 
   const test = new SceneInit('myThreeJsCanvas');
@@ -108,27 +129,29 @@ function App() {
             <div className={`nav-elements  ${showNavbar && 'active'}`}>
               <ul>
                 <li>
-                  <a href="/">Home</a>
+                  <a href='\'>Home</a>
                 </li>
                 <li>
-                <a href="/">Menu</a>
+                <a onClick={() => handleOpen("Menu")}>Menu</a>
                 </li>
                 <li>
-                <a href="/">About</a>
+                <a onClick={() => handleOpen("About")}>About</a>
                 </li>
                 <li>
-                <a href="/">Contact</a>
+                <a onClick={() => handleOpen("Contact")}>Contact</a>
                 </li>
-                <li>
-                <a href="/"></a>
-                </li>
+                <li><a></a></li>
               </ul>
             </div>
           </div>
         </nav>
         <div className='information'>
               <p className='our'>{ hamburger==0 ? "Our Classic" : "Our Special"}</p>
-              <p className='burger'>{ hamburger==0 || hamburger==1 ? "Burger" : "Pizza"}</p>
+              { hamburger==0 || hamburger==1 ?
+                  <p className='burger'> Burger </p>
+                  :
+                  <p className='pizza'> Pizza </p>
+              }
         </div>
         <div className='information2'>
               <p className='info2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
@@ -158,6 +181,30 @@ function App() {
              <img className="image" src={logo}/>
           </div>
       </div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+                {(() => {
+                if (modals=="About") {
+                  return (
+                    <SignInSide></SignInSide>
+                  )
+                } else if (modals=="Menu") {
+                  return (
+                    <img className='menu' src="../src/icons/realmenu.png"></img>
+                  )
+                } else {
+                  return (
+                    <SignInSide></SignInSide>
+                  )
+                }
+              })()}
+        </Box>
+      </Modal>
     </div>
   );
 }
