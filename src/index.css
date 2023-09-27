@@ -177,11 +177,13 @@ code {
     text-align: center;
   }
   .information{
+    font-size: 15px;
     left:10%;
   }
   
   .information2{
-    left:18%;
+    font-size: 10px;
+    left:15%;
   }
 
 

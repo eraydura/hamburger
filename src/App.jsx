@@ -36,20 +36,20 @@ function App() {
         test.initialize();
 
 
-        glftLoader.load(back_hamburger, (gltfScene) => {
+        glftLoader.load(realistic_hamburger, (gltfScene) => {
           loadedModel = gltfScene;
           gltfScene.scene.rotation.y = Math.PI / 8;
-          gltfScene.scene.position.y = 1;
-          gltfScene.scene.scale.set(0.8, 0.8, 0.8);
+          gltfScene.scene.position.y = -11;
+          gltfScene.scene.scale.set(0.55, 0.55, 0.55);
           test.animate();
           animate();
         });
 
-        glftLoader.load(realistic_hamburger, (gltfScene) => {
+        glftLoader.load(back_hamburger, (gltfScene) => {
           loadedModel2 = gltfScene;
           gltfScene.scene.rotation.y = Math.PI / 8;
-          gltfScene.scene.scale.set(0.6, 0.6, 0.6);
-          gltfScene.scene.position.y = -11;
+          gltfScene.scene.scale.set(0.75, 0.75, 0.75);
+          gltfScene.scene.position.y = 1;
           test.animate();
           animate();
         });
@@ -58,7 +58,7 @@ function App() {
           loadedModel3 = gltfScene;
           gltfScene.scene.rotation.y = Math.PI / 8;
           loadedModel3.scene.rotation.x = 90;
-          gltfScene.scene.scale.set(0.5, 0.5, 0.5);
+          gltfScene.scene.scale.set(0.45, 0.45, 0.45);
           test.animate();
           animate();
         });
