@@ -2,7 +2,11 @@ import { useEffect,useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import SceneInit from './lib/SceneInit';
+import back_hamburger from '../assets/back_yard_burgers/scene.gltf';
+import realistic_hamburger from '../assets/realistic_burger/scene.gltf';
 import logo from "./icons/hamburgermenu.png";
+import logomain from "../src/icons/logo.png";
+import hamburgers from "../src/icons/hamburger.png";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -26,10 +30,11 @@ function App() {
 
 
   useEffect(() => {
-
+        
         test.initialize();
 
-        glftLoader.load('./assets/back_yard_burgers/scene.gltf', (gltfScene) => {
+
+        glftLoader.load(back_hamburger, (gltfScene) => {
           loadedModel = gltfScene;
           gltfScene.scene.rotation.y = Math.PI / 8;
           gltfScene.scene.position.y = 1;
@@ -38,7 +43,7 @@ function App() {
           animate();
         });
 
-        glftLoader.load('./assets/realistic_burger/scene.gltf', (gltfScene) => {
+        glftLoader.load(realistic_hamburger, (gltfScene) => {
           loadedModel2 = gltfScene;
           gltfScene.scene.rotation.y = Math.PI / 8;
           gltfScene.scene.scale.set(0.6, 0.6, 0.6);
@@ -74,10 +79,10 @@ function App() {
       <nav className="navbar ">
       <div className="container">
         <div className="logo">
-           <img src="../src/icons/logo.png" ></img>
+           <img src={logomain} ></img>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
-          <img src="../src/icons/hamburger.png" ></img>
+          <img src={hamburgers} ></img>
         </div>
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>
