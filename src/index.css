@@ -182,7 +182,7 @@ code {
 
   .our{
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
   }
   .burger{
     font-size: 85px;
@@ -201,8 +201,9 @@ code {
     top: 80px;
     background-color: #ffffff;
     width: 0px;
-    height: calc(98.5vh - 80px);
+    height: calc(100vh - 80px);
     transition: all 0.3s ease-in;
+    overflow: hidden;
   }
 
   .nav-elements.active {
