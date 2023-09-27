@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import SceneInit from './lib/SceneInit';
 import back_hamburger from '../assets/back_yard_burgers/untitled.glb';
 import realistic_hamburger from '../assets/realistic_burger/untitled.glb';
+import pizza from '../assets/pizza/pizza.glb';
 import logo from "./icons/hamburgermenu.png";
 import logomain from "../src/icons/logo.png";
 import hamburgers from "../src/icons/hamburger.png";
@@ -18,6 +19,7 @@ function App() {
   const glftLoader = new GLTFLoader();
   let loadedModel;
   let loadedModel2;
+  let loadedModel3;
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
@@ -25,7 +27,7 @@ function App() {
 
   const nextModel = () => {
     number=number+1;
-    setHamburger(number%2);
+    setHamburger(number%3);
   }
 
 
@@ -51,6 +53,15 @@ function App() {
           test.animate();
           animate();
         });
+
+        glftLoader.load(pizza, (gltfScene) => {
+          loadedModel3 = gltfScene;
+          gltfScene.scene.rotation.y = Math.PI / 8;
+          loadedModel3.scene.rotation.x = 90;
+          gltfScene.scene.scale.set(0.5, 0.5, 0.5);
+          test.animate();
+          animate();
+        });
       
 
       const animate = () => {
@@ -61,7 +72,10 @@ function App() {
           }else if(hamburger==1 ){
             test.scene.add(loadedModel2.scene);
             loadedModel2.scene.rotation.y += 0.01;
-        }
+        }else if(hamburger==2 ){
+          test.scene.add(loadedModel3.scene);
+          loadedModel3.scene.rotation.y += 0.01;
+      }
       
         requestAnimationFrame(animate);
       };
@@ -73,7 +87,7 @@ function App() {
 
 
   return (
-    <div >
+    <div onClick={nextModel}>
       <canvas class="bg" id="myThreeJsCanvas" />
       <div id='info'>
       <nav className="navbar ">
@@ -106,8 +120,8 @@ function App() {
       </div>
     </nav>
     <div className='information'>
-          <div className='our'>{ hamburger==0 ? "Our Classic" : "Our Special"}</div>
-          <div className='burger'>Burger</div>
+          <p className='our'>{ hamburger==0 ? "Our Classic" : "Our Special"}</p>
+          <p className='burger'>{ hamburger==0 || hamburger==1 ? "Burger" : "Pizza"}</p>
     </div>
     <div className='information2'>
           <p className='info2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
@@ -122,8 +136,8 @@ function App() {
       <a class="fixedButton third" href>
         <div class="roundedFixedBtn"><i class="fa fa-facebook"></i></div>
       </a>
-
-      <button className='arrowdiv' onClick={nextModel}>
+     
+      <button className='arrowdiv'>
         &#10148;
       </button>
       </div>

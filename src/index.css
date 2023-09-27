@@ -100,7 +100,7 @@ code {
     font-weight: bold;
     border-radius: 50%;
     background-color: white;
-    color: black;
+    color: #550100;
     text-align: center;
     cursor: pointer;
 }
@@ -115,7 +115,6 @@ code {
   position: absolute;
   top: 350px;
   left:2%;
-  text-align: center;
   font-weight: bold;
   display: block;
   transform: translate(0, -50%);
@@ -142,6 +141,7 @@ code {
 }
 
 .our{
+  margin-left:28%;
   color: white;
   font-size: 50px;
   font-weight: bold;
@@ -170,13 +170,20 @@ code {
     display: none;
   }
 
+  .our{
+    text-align: center;
+  }
+  .burger{
+    text-align: center;
+  }
   .information{
-    display: none;
+    left:10%;
+  }
+  
+  .information2{
+    left:18%;
   }
 
-  .information2{
-    display: none;
-  }
 
   .nav-elements {
     position: absolute;
