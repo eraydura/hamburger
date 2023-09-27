@@ -50,6 +50,7 @@ function App() {
           loadedModel3 = gltfScene;
           gltfScene.scene.rotation.y = Math.PI / 8;
           loadedModel3.scene.rotation.x = 90;
+          gltfScene.scene.position.y = -2;
           gltfScene.scene.scale.set(0.45, 0.45, 0.45);
           test.animate();
           animate();
