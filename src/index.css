@@ -166,12 +166,8 @@ code {
   .column{
     display: flex;
     flex-wrap: nowrap;
-  }
-  .image2{
-    margin-left: 25%;
-    margin-top: 5%;
-    width: 55%;
-    display: block;
+    margin-top: 50%;
+    justify-content: space-between;
   }
   .menu-icon {
     left: 100%;
@@ -188,14 +184,13 @@ code {
     font-size: 30px;
   }
   .burger{
-    font-size: 80px;
+    font-size: 100px;
   }
   .information{
     left: 15%;
   }
   .information2{
-    left: 10%;
-    top: 480px;
+    display: none;
   }
 
   .nav-elements {

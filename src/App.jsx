@@ -31,6 +31,11 @@ function App() {
     setHamburger(number%3);
   }
 
+  const prevModel = () => {
+    number=number-1;
+    setHamburger(number%3);
+  }
+
 
   useEffect(() => {
         
@@ -142,9 +147,12 @@ function App() {
               ☛
           </button>
           <div class="column">
-            <div><button onClick={nextModel} className='arrowdiv2'>☚</button></div>
-            <div><img className="image2" src={menu}/></div>
-            <div><button onClick={nextModel} className='arrowdiv3'>☛</button></div>  
+          {hamburger!=0 ? (
+            <div><button onClick={prevModel} className='arrowdiv2'>☚</button></div>
+          ) : (
+             <div> </div>
+          )}
+             <div><button onClick={nextModel} className='arrowdiv3'>☛</button></div> 
           </div>
           <div className="myDiv">
              <img className="image" src={logo}/>
