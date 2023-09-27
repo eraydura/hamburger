@@ -92,8 +92,6 @@ export default function About() {
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Proin id lectus at leo convallis tincidunt vel ac risus. 
-            Pellentesque diam erat, mattis non lorem vel, viverra cursus velit.
-            Integer suscipit dapibus turpis non tempor. 
             </Typography>
             <Stack
               sx={{ pt: 4 }}
