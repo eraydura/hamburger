@@ -8,10 +8,10 @@ import pizza from '../assets/pizza/pizza.glb';
 import logo from "./icons/hamburgermenu.png";
 import logomain from "../src/icons/logo.png";
 import hamburgers from "../src/icons/hamburger.png";
-import menu from "../src/icons/realmenu.png";
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import SignInSide from './Contact';
+import About from './About';
 
 const style = {
   position: 'absolute',
@@ -192,11 +192,11 @@ function App() {
                 {(() => {
                 if (modals=="About") {
                   return (
-                    <SignInSide></SignInSide>
+                    <About></About>
                   )
                 } else if (modals=="Menu") {
                   return (
-                    <img className='menu' src={menu}></img>
+                    <img className='menu' src="../src/icons/realmenu.png"></img>
                   )
                 } else {
                   return (
