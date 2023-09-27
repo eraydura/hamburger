@@ -153,7 +153,7 @@ code {
 .burger{
 
   color: white;
-  font-size: 130px;
+  font-size: 150px;
   font-weight: 900;
 }
 .image2{
@@ -181,10 +181,10 @@ code {
 
   .our{
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
   }
   .burger{
-    font-size: 100px;
+    font-size: 85px;
   }
   .information{
     left: 15%;
