@@ -33,6 +33,9 @@ const defaultTheme = createTheme({
       main: "#000000",
     },
   },
+  typography: {
+    "fontFamily": ` "Sofia", sans-serif`,
+   }
 });
 
 

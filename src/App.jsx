@@ -9,16 +9,19 @@ import logo from "./icons/hamburgermenu.png";
 import logomain from "../src/icons/logo.png";
 import hamburgers from "../src/icons/hamburger.png";
 import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
+import Modal from '@mui/joy/Modal';
+import ModalClose from '@mui/joy/ModalClose';
 import SignInSide from './Contact';
+import About from './About';
+import menu from "../src/icons/realmenu.png";
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '80%',
-  height: '80%',
+  width: '100%',
+  height: '100%',
   boxShadow: 100,
 };
 
@@ -167,15 +170,15 @@ function App() {
             <div class="roundedFixedBtn"><i class="fa fa-facebook"></i></div>
           </a>
           <button onClick={nextModel} className='arrowdiv'>
-              ☛
+          ▶
           </button>
           <div class="column">
           {hamburger!=0 ? (
-            <div><button onClick={prevModel} className='arrowdiv2'>☚</button></div>
+            <div><button onClick={prevModel} className='arrowdiv2'>◀</button></div>
           ) : (
              <div> </div>
           )}
-             <div><button onClick={nextModel} className='arrowdiv3'>☛</button></div> 
+             <div><button onClick={nextModel} className='arrowdiv3'>▶</button></div> 
           </div>
           <div className="myDiv">
              <img className="image" src={logo}/>
@@ -188,14 +191,15 @@ function App() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+        <ModalClose  />
                 {(() => {
                 if (modals=="About") {
                   return (
-                    <SignInSide></SignInSide>
+                    <About></About>
                   )
                 } else if (modals=="Menu") {
                   return (
-                    <img className='menu' src="../src/icons/realmenu.png"></img>
+                    <img className='menu' src={menu}></img>
                   )
                 } else {
                   return (

@@ -140,10 +140,10 @@ code {
 .arrowdiv{
   border-top-width: 0px;
   color: #ffffff;
-  font-size: 250px;
+  font-size: 150px;
   position: relative;
-  margin-top: 12%;
-  left: 75%;
+  margin-top: 17%;
+  left: 70%;
 }
 
 .our{
@@ -203,6 +203,7 @@ code {
   }
   .information{
     left: 15%;
+    display: none;
   }
   .information2{
     display: none;
