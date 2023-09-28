@@ -30,6 +30,7 @@ function App() {
   const [hamburger, setHamburger] = useState(0);
   const [modals, setModal] = useState("About");
   const [open, setOpen] = React.useState(false);
+  const [showResults, setShowResults] = useState(false);
   function handleOpen(which) {
     setOpen(true);
     setModal(which);
@@ -97,15 +98,18 @@ function App() {
 
       const animate = () => {
 
-          if(hamburger==0 ){
+          if(hamburger==0 &&loadedModel ){
               test.scene.add(loadedModel.scene);
               loadedModel.scene.rotation.y += 0.01;
-          }else if(hamburger==1 ){
+              setShowResults(true);
+          }else if(hamburger==1 &&loadedModel2 ){
             test.scene.add(loadedModel2.scene);
             loadedModel2.scene.rotation.y += 0.01;
-        }else if(hamburger==2 ){
+            setShowResults(true);
+        }else if(hamburger==2 &&loadedModel3 ){
           test.scene.add(loadedModel3.scene);
           loadedModel3.scene.rotation.y += 0.01;
+          setShowResults(true);
       }
       
         requestAnimationFrame(animate);
@@ -169,16 +173,26 @@ function App() {
           <a class="fixedButton third" href>
             <div class="roundedFixedBtn"><i class="fa fa-facebook"></i></div>
           </a>
-          <button onClick={nextModel} className='arrowdiv'>
-          ▶
-          </button>
+          {showResults==true ? (
+              <button onClick={nextModel} className='arrowdiv'>
+              ☛
+              </button>) : (
+                <div></div>
+           )}
+
           <div class="column">
-          {hamburger!=0 ? (
-            <div><button onClick={prevModel} className='arrowdiv2'>◀</button></div>
-          ) : (
-             <div> </div>
-          )}
-             <div><button onClick={nextModel} className='arrowdiv3'>▶</button></div> 
+            
+              {hamburger!=0 && showResults==true ? (
+                <div><button onClick={prevModel} className='arrowdiv2'>☚</button></div>
+              ) : (
+                <div></div>
+              )}
+              {showResults==true ? (
+                <div><button onClick={nextModel} className='arrowdiv3'>☛</button></div>
+              ) : (
+                <div></div>
+              )}
+
           </div>
           <div className="myDiv">
              <img className="image" src={logo}/>
