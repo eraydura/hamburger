@@ -92,7 +92,7 @@ function App() {
         glftLoader.load(back_hamburger, (gltfScene) => {
           loadedModel2 = gltfScene;
           gltfScene.scene.rotation.y = Math.PI / 8;
-          gltfScene.scene.scale.set(0.75, 0.75, 0.75);
+          gltfScene.scene.scale.set(11, 11, 11);
           gltfScene.scene.position.y = 1;
           test.animate();
           animate();
