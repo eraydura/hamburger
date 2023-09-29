@@ -14,6 +14,7 @@ import ModalClose from '@mui/joy/ModalClose';
 import SignInSide from './Contact';
 import About from './About';
 import menu from "../src/icons/realmenu.png";
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 
 const style = {
   position: 'absolute',
@@ -63,7 +64,9 @@ function App() {
 
 
   useEffect(() => {
-        
+        const dracoLoader = new DRACOLoader()
+        dracoLoader.setDecoderPath('/js/libs/draco/')
+        glftLoader.setDRACOLoader(dracoLoader)
         test.initialize();
 
 
