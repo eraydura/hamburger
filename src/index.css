@@ -6,7 +6,6 @@ body {
   overflow-y: hidden;
 }
 
-
 .bg {
   position: relative;
   background-color: #550100;
@@ -17,37 +16,38 @@ body {
   background-size: cover;
 }
 
-.menu{
+.menu {
   width: 100%;
   height: 100%;
   align-items: center;
 }
-.myDiv { 
+
+.myDiv {
   text-align: center;
   position: absolute;
-	top: 30%;
+  top: 30%;
   border-radius: 69px / 20px;
-	z-index: 100;
-  left:85%;
-	display:block;
+  z-index: 100;
+  left: 85%;
+  display: block;
 }
 
-.image{
-  margin-left:80px;
+.image {
+  margin-left: 80px;
   width: 60%;
   height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 #info {
-	position: absolute;
-	top: 10px;
-	width: 100%;
-	z-index: 100;
-	display:block;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  z-index: 100;
+  display: block;
   background-color: none;
 }
 
@@ -92,52 +92,56 @@ code {
   text-decoration: none;
 }
 
-.fixedButton{
+.fixedButton {
   position: fixed;
   bottom: 0px;
-  right: 0px; 
+  right: 0px;
   padding: 20px;
 }
-.roundedFixedBtn{
-    height: 60px;
-    line-height: 60px;  
-    width: 60px;  
-    font-size: 2em;
-    font-weight: bold;
-    border-radius: 50%;
-    background-color: white;
-    color: #550100;
-    text-align: center;
-    cursor: pointer;
+
+.roundedFixedBtn {
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: white;
+  color: #550100;
+  text-align: center;
+  cursor: pointer;
 }
-.second{
+
+.second {
   right: 80px;
 }
 
-.third{
+.third {
   right: 160px;
 }
-.information{
+
+.information {
   position: absolute;
   top: 350px;
-  left:2%;
+  left: 2%;
   font-weight: bold;
   display: block;
   transform: translate(0, -50%);
   line-height: 400%;
 }
 
-.information2{
+.information2 {
   position: absolute;
   top: 520px;
-  left:2%;
+  left: 2%;
   text-align: center;
   font-weight: normal;
   display: block;
   transform: translate(0, -50%);
   line-height: 100%;
 }
-.arrowdiv{
+
+.arrowdiv {
   border-top-width: 0px;
   color: #ffffff;
   font-size: 150px;
@@ -146,66 +150,75 @@ code {
   left: 70%;
 }
 
-.our{
-  margin-left:28%;
+.our {
+  margin-left: 28%;
   color: white;
   font-size: 50px;
   font-weight: bold;
 }
-.info2{
+
+.info2 {
   color: white;
   font-size: 15px;
 }
-.burger{
 
+.burger {
   color: white;
   font-size: 150px;
   font-weight: 900;
 }
-.pizza{
 
+.pizza {
   color: white;
   font-size: 150px;
   font-weight: 900;
 }
-.image2{
+
+.image2 {
   display: none;
 }
+
 @media (max-width: 800px) {
-  .image{
+  .image {
     display: none;
   }
-  .column{
+
+  .column {
     display: flex;
     flex-wrap: nowrap;
     margin-top: 50%;
     justify-content: space-between;
   }
+
   .menu-icon {
     left: 100%;
     display: block;
     cursor: pointer;
   }
 
-  .arrowdiv{
+  .arrowdiv {
     display: none;
   }
 
-  .our{
+  .our {
     text-align: center;
     font-size: 30px;
   }
-  .burger{
+
+  .burger {
     font-size: 85px;
   }
-  .pizza{
+
+  .pizza {
     font-size: 100px;
   }
-  .information{
+
+  .information {
     left: 15%;
     display: none;
   }
-  .information2{
+
+  .information2 {
     display: none;
   }
 
@@ -237,32 +250,26 @@ code {
     margin-top: 60px;
   }
 
-  .nav-elements ul li a{
+  .nav-elements ul li a {
     color: black;
     font-size: 45px;
   }
 
-  .nav-elements ul li a:hover{
+  .nav-elements ul li a:hover {
     color: #550100;
   }
-  .arrowdiv2{
+
+  .arrowdiv2 {
     border-top-width: 0px;
     color: #ffffff;
     font-size: 80px;
     position: relative;
   }
 
-  .arrowdiv3{
+  .arrowdiv3 {
     border-top-width: 0px;
     color: #ffffff;
     font-size: 80px;
     position: relative;
   }
-  
 }
-
-
-
-
-
-
